@@ -1,0 +1,12 @@
+html {
+  font-size: 16px;
+  background: whitesmoke;
+  color: #50b350; }
+
+nav {
+  background: rgba(124, 111, 111, 0.74); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }

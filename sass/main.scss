@@ -1,0 +1,24 @@
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/fontawesome';
+
+// 3. Base stuff
+@import
+  'base/reset',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/navigation',
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
