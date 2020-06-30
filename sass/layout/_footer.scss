@@ -1,0 +1,41 @@
+footer {
+  background: $primary-heading-color;
+
+  .footer__logo {
+    width: auto;
+
+    img {
+        width: 40%;
+    }
+  }
+
+  .footer__social-media {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 5rem;
+  }
+
+  .footer__nav {
+    padding: 1.5rem 0;
+
+      ul {
+          @include ul-reset;
+
+          li {
+              display: block;
+              padding: 0.5rem 0;
+
+              a {
+                  color: white;
+              }
+          }
+      }
+  }
+
+  .footer__attribution {
+    color: $primary-txt-color;
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+  }
+
+}

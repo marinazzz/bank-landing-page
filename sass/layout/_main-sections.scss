@@ -1,0 +1,30 @@
+.section-banner {
+    background: $secondary-bcd-color;
+
+    .section-banner__text {
+        padding: 0 2rem 2rem;
+    }
+}
+
+.section-services {
+    padding: 2rem;
+    background: $secondary-heading-color;
+
+    .section-services__card,
+    h3 {
+        padding-top: 1rem;
+    }
+    .section-services__text {
+        padding-bottom: 2rem;
+    }
+}
+
+.article {
+    background: $secondary-bcd-color;
+    padding-top: 2rem;
+
+
+    .article__cards {
+        padding: 2rem;
+    }
+}
