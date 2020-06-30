@@ -1,7 +1,7 @@
 .section-banner {
     background: $secondary-bcd-color;
 
-    .section-banner__text {
+    &__text {
         padding: 0 2rem 2rem;
     }
 }
@@ -10,12 +10,9 @@
     padding: 2rem;
     background: $secondary-heading-color;
 
-    .section-services__card,
+    &__card,
     h3 {
         padding-top: 1rem;
-    }
-    .section-services__text {
-        padding-bottom: 2rem;
     }
 }
 
@@ -24,7 +21,7 @@
     padding-top: 2rem;
 
 
-    .article__cards {
+    &__cards {
         padding: 2rem;
     }
 }

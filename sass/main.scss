@@ -15,13 +15,12 @@
 
 // 4. Layout-related sections
 @import
-  'layout/navigation',
   'layout/main-sections',
   'layout/header',
   'layout/footer';
 
 // 5. Components
 @import
-  'components/article-cards',
+  'components/article-card',
   'components/banner',
   'components/button';

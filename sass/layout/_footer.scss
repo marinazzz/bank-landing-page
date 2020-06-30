@@ -10,8 +10,7 @@ footer {
   }
 
   .footer__social-media {
-    display: flex;
-    justify-content: space-evenly;
+    @include display-flex;
     padding: 1rem 5rem;
   }
 

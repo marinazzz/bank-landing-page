@@ -16,9 +16,7 @@ html {
 
 h1, h2, h3, h4 {
   color: #2d314d;
-  margin: 0; }
-
-h1, h2, h3, h4 {
+  margin: 0;
   font-weight: 400; }
 
 h1 {
@@ -39,34 +37,45 @@ p {
   line-height: 1.5;
   color: #9698a6; }
 
-.nav__menu {
-  list-style-type: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: space-evenly; }
-  .nav__menu .nav__menu-item {
-    display: block; }
-
 .section-banner {
   background: #fafafa; }
-  .section-banner .section-banner__text {
+  .section-banner__text {
     padding: 0 2rem 2rem; }
 
 .section-services {
   padding: 2rem;
   background: #f3f4f6; }
-  .section-services .section-services__card,
+  .section-services__card,
   .section-services h3 {
     padding-top: 1rem; }
-  .section-services .section-services__text {
-    padding-bottom: 2rem; }
 
 .article {
   background: #fafafa;
   padding-top: 2rem; }
-  .article .article__cards {
+  .article__cards {
     padding: 2rem; }
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem; }
+  .nav__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly; }
+    .nav__menu__menu-item {
+      display: block; }
+  .nav__button {
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 3rem;
+    line-height: 0;
+    padding: 0;
+    color: gray; }
 
 footer {
   background: #2d314d; }
@@ -98,6 +107,11 @@ footer {
   display: block;
   border-radius: 0.5rem;
   background: white; }
+  .article__card .article__card-img {
+    width: auto; }
+    .article__card .article__card-img img {
+      width: 100%;
+      border-radius: 0.5rem 0.5rem 0 0; }
   .article__card .article__card-text {
     padding: 1.5rem; }
     .article__card .article__card-text h4,
@@ -106,11 +120,6 @@ footer {
       text-align: left;
       margin: 0;
       padding-bottom: 1rem; }
-  .article__card .article__card-img {
-    width: auto; }
-    .article__card .article__card-img img {
-      width: 100%;
-      border-radius: 0.5rem 0.5rem 0 0; }
 
 .section-banner__image {
   background: url(/images/image-mockups.png), url(/images/bg-intro-mobile.svg);
@@ -129,4 +138,4 @@ footer {
   font-weight: 700;
   border: none;
   border-radius: 1.5rem;
-  background-image: linear-gradient(280deg, #00BCD4, #66FF99); }
+  background-image: linear-gradient(280deg, #2bb7da, #31d35c); }
