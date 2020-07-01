@@ -1,28 +1,33 @@
-.article__card {
+.article {
+  @include breakpoint-up('md') {
+
+  };
+  @include breakpoint-up('lg') {
+
+  };
+  @include breakpoint-up('xl') {
+
+  };
+  &__card {
     display: block;
     border-radius: 0.5rem;
     background: white;
-
-    .article__card-img {
-        width: auto;
-
-        img {
-            width: 100%;
-            border-radius: 0.5rem 0.5rem 0 0;
-        }
+  }
+  &__card-img {
+    width: auto;
+      img {
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
     }
-
-    .article__card-text {
-        padding: 1.5rem;
-
-        h4,
-        h5,
-        p {
-           text-align: left;
-           margin: 0;
-           padding-bottom: 1rem;
-        }
-
+  }
+  &__card-text {
+    padding: 1.5rem;
+    h4,
+    h5,
+    p {
+        text-align: left;
+        margin: 0;
+        padding-bottom: 1rem;
     }
-
+  }
 }

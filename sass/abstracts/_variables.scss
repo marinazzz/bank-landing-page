@@ -10,6 +10,10 @@ $primary-txt-color: hsl(233, 8%, 62%);
 $primary-btn-color: hsl(136, 65%, 51%);
 $secondary-btn-color: hsl(192, 70%, 51%);
 
-//ICONS
-
-$fa-font-path: "/sass/vendors/fontawesome-free-5.13.1-web/webfonts/";
+// BREAKPOINTS
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+)

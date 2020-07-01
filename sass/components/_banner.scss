@@ -1,10 +1,8 @@
 .section-banner__image {
-    background: url(/images/image-mockups.png),
-                url(/images/bg-intro-mobile.svg);
+    background: url(../images/image-mockups.png), url(../images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom 39px right;
     background-color: $secondary-bcd-color;
     height: 35vh;
-
 }

@@ -1,26 +1,24 @@
 // 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
 
 // 2. Vendors
-@import
-  'vendors/fontawesome';
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
 
 // 3. Base stuff
-@import
-  'base/reset',
-  'base/typography';
+@import 'base/reset';
+@import 'base/typography';
 
 // 4. Layout-related sections
-@import
-  'layout/main-sections',
-  'layout/header',
-  'layout/footer';
+@import 'layout/main-sections';
+@import 'layout/header';
+@import 'layout/footer';
 
 // 5. Components
-@import
-  'components/article-card',
-  'components/banner',
-  'components/button';
+@import 'components/article-card';
+@import 'components/banner';
+@import 'components/button';
