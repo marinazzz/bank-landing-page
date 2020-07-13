@@ -1,0 +1,21 @@
+.section-banner__image {
+  background: url(../images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: $secondary-bcd-color;
+  position: relative;
+  height: 18.5rem;
+
+  &::before {
+    content: "";
+    background: url(../images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center bottom;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+}

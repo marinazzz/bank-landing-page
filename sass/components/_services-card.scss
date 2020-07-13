@@ -1,0 +1,11 @@
+.section-services__card {
+    img,
+    h3 {
+        padding-bottom: $space-md;
+    }
+
+    p {
+        @include paragraph-reset;
+    }
+
+}

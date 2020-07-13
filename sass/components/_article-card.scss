@@ -1,0 +1,31 @@
+.article {
+    &__card {
+        display: block;
+        border-radius: 0.5rem;
+        background: white;
+        margin-bottom: $space-md;
+      }
+      &__card-img {
+        width: auto;
+          img {
+            width: 100%;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+      }
+      &__card-text {
+        padding: $space-md;
+        span {
+            display: block;
+            font-size: 0.9rem;
+            color: $primary-txt-color;
+        }
+
+        span,
+        h4,
+        p {
+          @include paragraph-reset;
+          text-align: left;
+        }
+      }
+
+}

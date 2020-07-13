@@ -1,0 +1,26 @@
+@mixin ul-reset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin paragraph-reset {
+  margin: 0;
+  padding-bottom: $space-md;
+}
+
+@mixin display-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin breakpoint-up($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+    @else {
+      @warn 'Breakpoints `#{$breakpoint}` is not a key in $breakpoints map. $breakpoints #{map-keys($breakpoints)}';
+    }
+  }

@@ -1,0 +1,36 @@
+.section-banner {
+  background: $secondary-bcd-color;
+  padding-bottom: $space-lg;
+
+  &__text {
+    padding: 0 $space-md;
+  }
+}
+
+.section-services {
+
+  background: $secondary-heading-color;
+  padding: $space-lg $space-md;
+
+  &__text {
+    padding-bottom: $space-lg;
+
+    h2 {
+      padding-bottom: $space-md;
+    }
+
+    p {
+      @include paragraph-reset;
+    }
+  }
+
+}
+
+.article {
+  background: $secondary-bcd-color;
+  padding: $space-lg $space-md;
+
+  h2 {
+    padding-bottom: $space-md;
+  }
+}

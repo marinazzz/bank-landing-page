@@ -1,0 +1,40 @@
+.footer {
+  background: $primary-heading-color;
+
+  &__logo {
+    width: auto;
+
+    img {
+        width: 40%;
+    }
+  }
+
+  &__social-media {
+    @include display-flex;
+    padding: 1rem 5rem;
+  }
+
+  &__nav {
+    padding: 1.5rem 0;
+
+      ul {
+          @include ul-reset;
+
+          li {
+              display: block;
+              padding: 0.5rem 0;
+
+              a {
+                  color: white;
+              }
+          }
+      }
+  }
+
+  &__attribution {
+    color: $primary-txt-color;
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+  }
+
+}
