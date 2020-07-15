@@ -11,7 +11,8 @@
 
 @mixin display-flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @mixin breakpoint-up($breakpoint) {
@@ -24,3 +25,10 @@
       @warn 'Breakpoints `#{$breakpoint}` is not a key in $breakpoints map. $breakpoints #{map-keys($breakpoints)}';
     }
   }
+
+
+@mixin hover-style {
+  transition: color 150ms ease-in-out;
+  color: $primary-btn-color;
+  cursor: pointer;
+}

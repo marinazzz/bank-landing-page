@@ -1,0 +1,52 @@
+.nav__button {
+  @include breakpoint-up("lg") {
+    display: none;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.6rem;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 0;
+
+  &-item,
+  &-item::after,
+  &-item::before {
+    width: 1.6rem;
+    height: 0.12rem;
+    background: $primary-heading-color;
+    transition: all 0.35s ease;
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-item::after,
+  &-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.45rem;
+  }
+
+  &-item::after {
+    bottom: 0.45rem;
+  }
+
+  &--open &-item::before {
+    transform: rotateZ(45deg) translate(-6px, -6px);
+  }
+
+  &--open &-item::after {
+    transform: rotateZ(-45deg) translate(-6px, 6px);
+  }
+
+  &--open &-item {
+    background: transparent;
+  }
+}

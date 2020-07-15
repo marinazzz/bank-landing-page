@@ -12,6 +12,10 @@
   &__social-media {
     @include display-flex;
     padding: 1rem 5rem;
+
+    a:hover {
+      @include hover-style;
+    }
   }
 
   &__nav {

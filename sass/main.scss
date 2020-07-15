@@ -2,6 +2,8 @@
 @import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
+@import 'abstracts/animations';
+
 
 // 2. Vendors
 
@@ -20,3 +22,4 @@
 @import 'components/services-card';
 @import 'components/banner';
 @import 'components/button';
+@import 'components/nav-button';

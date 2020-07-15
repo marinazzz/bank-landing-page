@@ -26,6 +26,10 @@
           @include paragraph-reset;
           text-align: left;
         }
+
+        h4:hover {
+          @include hover-style;
+        }
       }
 
 }
