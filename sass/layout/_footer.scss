@@ -1,44 +1,123 @@
 .footer {
   background: $primary-heading-color;
+  padding: $space-lg $space-md;
+
+  @include breakpoint-up("lg") {
+    padding: $space-xl 0;
+  }
 
   &__logo {
     width: auto;
+    padding-bottom: $space-lg;
+
+    @include breakpoint-up("lg") {
+      padding-bottom: 3.2rem;
+    }
 
     img {
-        width: 40%;
+      width: 40%;
+
+      @include breakpoint-up("lg") {
+        width: 100%;
+      }
     }
   }
 
   &__social-media {
     @include display-flex;
-    padding: 1rem 5rem;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-bottom: $space-md;
 
-    a:hover {
-      @include hover-style;
+    @include breakpoint-up("lg") {
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+
+    img:hover {
+      filter: invert(0.08) sepia(0.5) saturate(7.1) hue-rotate(68.4deg) brightness(0.61);
     }
   }
 
   &__nav {
-    padding: 1.5rem 0;
+    padding-bottom: $space-lg;
+    @include breakpoint-up("lg") {
+      padding-bottom: 0;
+    }
 
-      ul {
-          @include ul-reset;
+    ul {
+      @include ul-reset;
 
-          li {
-              display: block;
-              padding: 0.5rem 0;
-
-              a {
-                  color: white;
-              }
-          }
+      @include breakpoint-up("lg") {
+        columns: 2;
       }
+
+      > li:not(:last-child) {
+        padding-bottom: 1rem;
+      }
+
+
+      li {
+        display: block;
+
+        @include breakpoint-up("lg") {
+          padding-bottom: 1rem;
+        }
+
+        a {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__items {
+    font-size: 0.9rem;
+
+    @include breakpoint-up("lg") {
+      text-align: right;
+    }
+
+    p {
+      @include breakpoint-up("lg") {
+        padding-top: 3.2rem;
+        text-align: right;
+      }
+    }
   }
 
   &__attribution {
     color: $primary-txt-color;
-    padding-bottom: 1rem;
     line-height: 1.5rem;
+
+    @include breakpoint-up("lg") {
+        text-align: right;
+      }
+
+    a {
+      @include breakpoint-up("lg") {
+        text-align: right;
+      }
+    }
   }
 
+  a:hover {
+    @include hover-style;
+  }
+
+  &__content,
+  &__content-wrapper {
+
+      @include breakpoint-up("lg") {
+        @include display-flex;
+        align-items: flex-start;
+      }
+
+  }
+
+  &__content-wrapper {
+    @include breakpoint-up("lg") {
+      width: 50%;
+    }
+  }
 }
