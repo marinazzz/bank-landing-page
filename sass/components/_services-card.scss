@@ -1,11 +1,33 @@
-.section-services__card {
-    img,
-    h3 {
-        padding-bottom: $space-md;
+.section-services__content {
+
+    > div {
+
+        img,
+        h3 {
+            padding-bottom: $space-md;
+        }
+
+        img {
+            @include breakpoint-up("lg") {
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        h3 {
+            @include breakpoint-up("lg") {
+                padding-bottom: $space-lg;
+            }
+        }
+
+        p {
+            @include paragraph-reset;
+        }
     }
 
-    p {
-        @include paragraph-reset;
+    > div:not(:last-child) {
+        @include breakpoint-up("lg") {
+            margin-right: 1.5rem;
+        }
     }
 
 }

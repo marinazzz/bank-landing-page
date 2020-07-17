@@ -1,35 +1,72 @@
-.article {
-    &__card {
+.articles {
+  &__card {
+    display: block;
+    border-radius: 0.5rem;
+    background: white;
+    margin-bottom: $space-md;
+
+    @include breakpoint-up("lg") {
+      margin-bottom: 0;
+      max-height: 420px;
+    }
+
+    &-image {
+      width: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+
+      @include breakpoint-up("lg") {
+        height: 210px;
+      }
+    }
+    &-text {
+      padding: $space-md;
+
+      @include breakpoint-up("lg") {
+        height: 210px;
+        padding: 1.35rem;
+      }
+
+      span,
+      h4,
+      p {
+        @include paragraph-reset;
+        text-align: left;
+
+        @include breakpoint-up("lg") {
+          font-size: 0.8rem;
+          padding-bottom: $space-sm;
+        }
+      }
+
+      span {
         display: block;
-        border-radius: 0.5rem;
-        background: white;
-        margin-bottom: $space-md;
+        font-size: 0.65rem;
+        color: $primary-txt-color;
       }
-      &__card-img {
-        width: auto;
-          img {
-            width: 100%;
-            border-radius: 0.5rem 0.5rem 0 0;
-        }
-      }
-      &__card-text {
-        padding: $space-md;
-        span {
-            display: block;
-            font-size: 0.9rem;
-            color: $primary-txt-color;
-        }
 
-        span,
-        h4,
-        p {
-          @include paragraph-reset;
-          text-align: left;
-        }
-
-        h4:hover {
-          @include hover-style;
+      h4 {
+        @include breakpoint-up("lg") {
+          font-size: 1rem;
         }
       }
 
+      h4:hover {
+        @include hover-style;
+      }
+    }
+
+  }
+
+  &__content {
+    > article:not(:last-child) {
+      @include breakpoint-up("lg") {
+        margin-right: 1.5rem;
+      }
+    }
+  }
 }

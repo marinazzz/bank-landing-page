@@ -3,6 +3,7 @@
 
   @include breakpoint-up("lg") {
     display: flex;
+    padding: $space-md 0;
   }
 
   &__list {

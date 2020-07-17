@@ -2,9 +2,28 @@
   background: $secondary-bcd-color;
   padding-bottom: $space-lg;
 
+  &__container {
+    display: block;
+
+    @include breakpoint-up("lg") {
+      @include display-flex;
+      flex-direction: row-reverse;
+    }
+  }
+
   &__text {
     padding: 0 $space-md;
+
+    @include breakpoint-up("lg") {
+      padding: 0;
+      flex: 2;
+
+      h1, p {
+        padding-bottom: $space-md;
+      }
+    }
   }
+
 }
 
 .section-services {
@@ -12,8 +31,17 @@
   background: $secondary-heading-color;
   padding: $space-lg $space-md;
 
-  &__text {
+  @include breakpoint-up("lg") {
+    padding: $space-xxxl 0;
+  }
+
+  &__intro {
     padding-bottom: $space-lg;
+
+    @include breakpoint-up("lg") {
+      padding-bottom: $space-xxl;
+    }
+
 
     h2 {
       padding-bottom: $space-md;
@@ -21,16 +49,41 @@
 
     p {
       @include paragraph-reset;
+      @include breakpoint-up("lg") {
+        max-width: 650px;
+      }
+    }
+  }
+
+  &__content {
+    @include breakpoint-up("lg") {
+      @include display-flex;
+      align-items: flex-start;
     }
   }
 
 }
 
-.article {
+.articles {
   background: $secondary-bcd-color;
   padding: $space-lg $space-md;
 
-  h2 {
+  @include breakpoint-up("lg") {
+    padding: $space-xxxl 0;
+  }
+
+  &__intro {
     padding-bottom: $space-md;
+
+    @include breakpoint-up("lg") {
+      padding-bottom: $space-xl;
+    }
+  }
+
+  &__content {
+    @include breakpoint-up("lg") {
+      @include display-flex;
+      align-items: flex-start;
+    }
   }
 }
