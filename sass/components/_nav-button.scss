@@ -3,21 +3,18 @@
     display: none;
   }
 
-  display: flex;
-  align-items: center;
+  @include display-flex;
+
   justify-content: center;
-  height: 1.6rem;
-  cursor: pointer;
+  height: 1.2rem;
   background-color: white;
-  border: none;
-  outline: none;
   padding: 0;
 
   &-item,
   &-item::after,
   &-item::before {
-    width: 1.6rem;
-    height: 0.12rem;
+    width: 1.4rem;
+    height: 0.1rem;
     background: $primary-heading-color;
     transition: all 0.35s ease;
   }
@@ -28,7 +25,7 @@
 
   &-item::after,
   &-item::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -0.45rem;

@@ -1,20 +1,21 @@
 .footer {
   background: $primary-heading-color;
-  padding: $space-lg $space-md;
+  padding: $md $sm;
 
   @include breakpoint-up("lg") {
-    padding: $space-xl 0;
+    padding: 3.25rem 0;
   }
 
   &__logo {
     width: auto;
-    padding-bottom: $space-lg;
+    padding-bottom: $md;
 
     @include breakpoint-up("lg") {
       padding-bottom: 3.2rem;
     }
 
     img {
+      margin: auto;
       width: 40%;
 
       @include breakpoint-up("lg") {
@@ -27,7 +28,7 @@
     @include display-flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    padding-bottom: $space-md;
+    padding-bottom: $md;
 
     @include breakpoint-up("lg") {
       justify-content: space-between;
@@ -35,12 +36,12 @@
     }
 
     img:hover {
-      filter: invert(0.08) sepia(0.5) saturate(7.1) hue-rotate(68.4deg) brightness(0.61);
+      filter: $filter-green;
     }
   }
 
   &__nav {
-    padding-bottom: $space-lg;
+    padding-bottom: $md;
     @include breakpoint-up("lg") {
       padding-bottom: 0;
     }
@@ -53,15 +54,12 @@
       }
 
       > li:not(:last-child) {
-        padding-bottom: 1rem;
+        padding-bottom: $sm;
       }
 
-
       li {
-        display: block;
-
         @include breakpoint-up("lg") {
-          padding-bottom: 1rem;
+          padding-bottom: $md;
         }
 
         a {
@@ -73,6 +71,10 @@
 
   &__items {
     font-size: 0.9rem;
+
+    button {
+      margin-bottom: $md;
+    }
 
     @include breakpoint-up("lg") {
       text-align: right;
@@ -92,7 +94,7 @@
 
     @include breakpoint-up("lg") {
         text-align: right;
-      }
+    }
 
     a {
       @include breakpoint-up("lg") {
@@ -100,6 +102,7 @@
       }
     }
   }
+
 
   a:hover {
     @include hover-style;

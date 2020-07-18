@@ -1,33 +1,34 @@
 .section-services__content {
 
     > div {
-
         img,
         h3 {
-            padding-bottom: $space-md;
+            padding-bottom: $sm;
         }
 
         img {
+            margin: auto;
             @include breakpoint-up("lg") {
-                padding-bottom: 2.5rem;
+                margin: 0;
+                padding-bottom: $lg;
             }
         }
 
         h3 {
             @include breakpoint-up("lg") {
-                padding-bottom: $space-lg;
+                padding-bottom: $md;
             }
-        }
-
-        p {
-            @include paragraph-reset;
         }
     }
 
     > div:not(:last-child) {
+        padding-bottom: $md;
         @include breakpoint-up("lg") {
             margin-right: 1.5rem;
         }
     }
 
+    @include breakpoint-up("lg") {
+        flex: 1;
+    }
 }

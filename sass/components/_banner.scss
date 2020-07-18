@@ -1,37 +1,36 @@
 .section-banner__image {
-  background: url(../images/bg-intro-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: $secondary-bcd-color;
   position: relative;
-  height: 18.5rem;
+    height: 19.3rem;
+    background: url(../images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    background-color: #fafafa;
 
   @include breakpoint-up("lg") {
+    min-height: 40rem;
     background: url(../images/bg-intro-desktop.svg);
     background-size: 66rem;
     background-position: left 97%;
-    min-height: 40rem;
     flex: 3;
     left: 20%;
   }
 
   &::before {
-    content: "";
-    background: url(../images/image-mockups.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center bottom;
+    content: '';
+    position: absolute;
     height: 100%;
     width: 100%;
-    position: absolute;
-    left: 0;
+    background: url(../images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: 94%;
+    background-position: center bottom;
 
     @include breakpoint-up("lg") {
-      background-size: 95%;
-      background-position: center 150%;
       height: 120%;
       width: 120%;
+      background-size: 95%;
+      background-position: center 150%;
       left: 20%;
     }
 

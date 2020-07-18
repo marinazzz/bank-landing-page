@@ -1,30 +1,35 @@
 //COLORS
-$primary-bcd-color:hsl(233, 8%, 62%);
-$secondary-bcd-color: hsl(0, 0%, 98%);
 
+//Primary
 $primary-heading-color:hsl(233, 26%, 24%);
-$secondary-heading-color: hsl(220, 16%, 96%);
-
-$primary-txt-color: hsl(233, 8%, 62%);
-
 $primary-btn-color: hsl(136, 65%, 51%);
 $secondary-btn-color: hsl(192, 70%, 51%);
 
-//spacing values
 
-$space-xs: 0.5rem;
-$space-sm: 0.75rem;
-$space-md: 1.25rem;
-$space-lg: 2rem;
-$space-xl: 3.25rem;
-$space-xxl: 4rem;
-$space-xxxl: 6rem;
+// Neutral
+
+$primary-bcd-color:hsl(233, 8%, 62%);
+$secondary-bcd-color: hsl(0, 0%, 98%);
+$secondary-heading-color: hsl(220, 16%, 96%);
+$primary-txt-color: hsl(233, 8%, 62%);
+
+
+//HOVER ON IMG FILTERS
+$filter-green: invert(0.08) sepia(0.5) saturate(7.1) hue-rotate(68.4deg) brightness(0.61);
+
+//PADDING
+$xs: 0.9rem;
+$sm: 1.4rem;
+$md: 2rem;
+$lg: 2.8rem;
+$xl: 4.5rem;
+$xxl: 6rem;
 
 
 // BREAKPOINTS
 $breakpoints: (
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1200px
-)
+  'sm': '576px',
+  'md': '768px',
+  'lg': '992px',
+  'xl': '1200px'
+);

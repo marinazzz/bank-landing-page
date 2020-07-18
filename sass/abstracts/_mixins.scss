@@ -15,17 +15,11 @@
     align-items: center;
 }
 
-@mixin breakpoint-up($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+@mixin breakpoint-up($size) {
+      @media (min-width: map-get($breakpoints, $size)) {
         @content;
       }
-    }
-    @else {
-      @warn 'Breakpoints `#{$breakpoint}` is not a key in $breakpoints map. $breakpoints #{map-keys($breakpoints)}';
-    }
   }
-
 
 @mixin hover-style {
   transition: color 150ms ease-in-out;

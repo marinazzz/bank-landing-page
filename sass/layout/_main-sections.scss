@@ -1,6 +1,6 @@
 .section-banner {
   background: $secondary-bcd-color;
-  padding-bottom: $space-lg;
+  padding-bottom: $xl;
 
   &__container {
     display: block;
@@ -12,78 +12,75 @@
   }
 
   &__text {
-    padding: 0 $space-md;
+    padding: $lg $sm 0 $sm;
+
+    h1, p {
+        padding-bottom: $md;
+    }
 
     @include breakpoint-up("lg") {
       padding: 0;
       flex: 2;
-
-      h1, p {
-        padding-bottom: $space-md;
-      }
     }
   }
 
 }
 
-.section-services {
-
-  background: $secondary-heading-color;
-  padding: $space-lg $space-md;
+.section-services,
+.articles {
+  padding: $xl $sm;
 
   @include breakpoint-up("lg") {
-    padding: $space-xxxl 0;
+    padding: $xxl 0;
   }
 
   &__intro {
-    padding-bottom: $space-lg;
+    padding-bottom: $md;
 
     @include breakpoint-up("lg") {
-      padding-bottom: $space-xxl;
+      padding-bottom: $xl;
+    }
+  }
+
+  &__content {
+    @include breakpoint-up("md") {
+      @include display-flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    @include breakpoint-up("lg") {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__card {
+    @include breakpoint-up("md") {
+      flex: 1 1 50%;
     }
 
-
-    h2 {
-      padding-bottom: $space-md;
+    @include breakpoint-up("lg") {
+      flex: 1;
     }
+  }
+}
+
+.section-services {
+  background: $secondary-heading-color;
+
+  &__intro {
 
     p {
-      @include paragraph-reset;
       @include breakpoint-up("lg") {
         max-width: 650px;
       }
     }
   }
-
-  &__content {
-    @include breakpoint-up("lg") {
-      @include display-flex;
-      align-items: flex-start;
-    }
-  }
-
 }
 
 .articles {
   background: $secondary-bcd-color;
-  padding: $space-lg $space-md;
 
-  @include breakpoint-up("lg") {
-    padding: $space-xxxl 0;
-  }
-
-  &__intro {
-    padding-bottom: $space-md;
-
-    @include breakpoint-up("lg") {
-      padding-bottom: $space-xl;
-    }
-  }
-
-  &__content {
-    @include breakpoint-up("lg") {
-      @include display-flex;
-      align-items: flex-start;
-    }
+  h2 {
+    padding-bottom: 0;
   }
 }

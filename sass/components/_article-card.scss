@@ -3,9 +3,9 @@
     display: block;
     border-radius: 0.5rem;
     background: white;
-    margin-bottom: $space-md;
+    margin-bottom: 1.25rem;
 
-    @include breakpoint-up("lg") {
+    @include breakpoint-up("md") {
       margin-bottom: 0;
       max-height: 420px;
     }
@@ -19,27 +19,34 @@
         border-radius: 0.5rem 0.5rem 0 0;
       }
 
-      @include breakpoint-up("lg") {
+      @include breakpoint-up("md") {
         height: 210px;
       }
     }
     &-text {
-      padding: $space-md;
+      padding: $sm;
 
-      @include breakpoint-up("lg") {
+      @include breakpoint-up("md") {
         height: 210px;
-        padding: 1.35rem;
+        padding: $sm;
+      }
+
+      span,
+      h4 {
+        padding-bottom: $xs;
+      }
+
+      p {
+        font-size: 0.8rem;
       }
 
       span,
       h4,
       p {
-        @include paragraph-reset;
         text-align: left;
 
-        @include breakpoint-up("lg") {
-          font-size: 0.8rem;
-          padding-bottom: $space-sm;
+        @include breakpoint-up("md") {
+          padding-bottom: 0.75rem;
         }
       }
 
@@ -47,12 +54,6 @@
         display: block;
         font-size: 0.65rem;
         color: $primary-txt-color;
-      }
-
-      h4 {
-        @include breakpoint-up("lg") {
-          font-size: 1rem;
-        }
       }
 
       h4:hover {
