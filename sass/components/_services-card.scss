@@ -19,16 +19,17 @@
                 padding-bottom: $md;
             }
         }
-    }
 
-    > div:not(:last-child) {
-        padding-bottom: $md;
-        @include breakpoint-up("lg") {
-            margin-right: 1.5rem;
+        p {
+            @include breakpoint-up("md") {
+                padding-bottom: $sm;
+            }
         }
     }
 
-    @include breakpoint-up("lg") {
-        flex: 1;
+    > div:not(:last-child) {
+        @include breakpoint-up("md") {
+            padding-bottom: 0;
+        }
     }
 }

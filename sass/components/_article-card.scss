@@ -7,7 +7,6 @@
 
     @include breakpoint-up("md") {
       margin-bottom: 0;
-      max-height: 420px;
     }
 
     &-image {
@@ -18,36 +17,32 @@
         height: 100%;
         border-radius: 0.5rem 0.5rem 0 0;
       }
-
-      @include breakpoint-up("md") {
-        height: 210px;
-      }
     }
+
     &-text {
       padding: $sm;
 
       @include breakpoint-up("md") {
-        height: 210px;
-        padding: $sm;
-      }
-
-      span,
-      h4 {
-        padding-bottom: $xs;
-      }
-
-      p {
-        font-size: 0.8rem;
+        padding: $md;
       }
 
       span,
       h4,
       p {
         text-align: left;
+      }
+
+      span,
+      h4 {
+        padding-bottom: $xs;
 
         @include breakpoint-up("md") {
           padding-bottom: 0.75rem;
         }
+      }
+
+      p {
+        font-size: 0.8rem;
       }
 
       span {
@@ -61,13 +56,5 @@
       }
     }
 
-  }
-
-  &__content {
-    > article:not(:last-child) {
-      @include breakpoint-up("lg") {
-        margin-right: 1.5rem;
-      }
-    }
   }
 }

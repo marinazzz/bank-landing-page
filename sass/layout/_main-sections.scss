@@ -18,6 +18,19 @@
         padding-bottom: $md;
     }
 
+
+      p {
+        @include breakpoint-up("md") {
+          max-width: 550px;
+          margin: auto;
+        }
+
+        @include breakpoint-up("lg") {
+          margin: 0;
+          max-width: 460px;
+        }
+      }
+
     @include breakpoint-up("lg") {
       padding: 0;
       flex: 2;
@@ -36,30 +49,18 @@
 
   &__intro {
     padding-bottom: $md;
-
-    @include breakpoint-up("lg") {
-      padding-bottom: $xl;
-    }
   }
 
   &__content {
     @include breakpoint-up("md") {
-      @include display-flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    @include breakpoint-up("lg") {
-      flex-wrap: nowrap;
-    }
-  }
-
-  &__card {
-    @include breakpoint-up("md") {
-      flex: 1 1 50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $sm;
+      row-gap: $sm;
     }
 
     @include breakpoint-up("lg") {
-      flex: 1;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -68,9 +69,14 @@
   background: $secondary-heading-color;
 
   &__intro {
-
     p {
+      @include breakpoint-up("md") {
+        max-width: 550px;
+        margin: auto;
+      }
+
       @include breakpoint-up("lg") {
+        margin: 0;
         max-width: 650px;
       }
     }
