@@ -4,6 +4,10 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    overflow: hidden;
+}
+
 a {
     color: $primary-txt-color;
     text-decoration: none;

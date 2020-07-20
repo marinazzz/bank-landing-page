@@ -3,7 +3,7 @@
   padding: $md $sm;
 
   @include breakpoint-up("lg") {
-    padding: 3.25rem 0;
+    padding: 3.25rem $sm;
   }
 
   &__logo {
@@ -11,7 +11,7 @@
     padding-bottom: $md;
 
     @include breakpoint-up("lg") {
-      padding-bottom: 4rem;
+      padding-bottom: 0;
     }
 
     img {
@@ -19,7 +19,8 @@
       width: 40%;
 
       @include breakpoint-up("lg") {
-        width: 100%;
+        margin: 0;
+        width: 60%;
       }
     }
   }
@@ -31,6 +32,7 @@
     padding-bottom: $md;
 
     @include breakpoint-up("lg") {
+      width: 60%;
       justify-content: space-between;
       padding-bottom: 0;
     }
@@ -50,18 +52,20 @@
       @include ul-reset;
 
       @include breakpoint-up("lg") {
-        columns: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        align-content: space-evenly;
       }
 
       > li:not(:last-child) {
         padding-bottom: $sm;
+        @include breakpoint-up("lg") {
+          padding-bottom: 0;
+        }
       }
 
       li {
-        @include breakpoint-up("lg") {
-          padding-bottom: $md;
-        }
-
         a {
           font-weight: 500;
         }
@@ -74,12 +78,17 @@
 
     @include breakpoint-up("lg") {
       text-align: right;
+      display: grid;
+      justify-items: right;
+      row-gap: 1.5rem;
+      align-content: space-between;
     }
 
     p {
       padding-top: $lg;
 
       @include breakpoint-up("lg") {
+        padding-top: 0;
         text-align: right;
       }
     }
@@ -109,15 +118,13 @@
   &__content-wrapper {
 
       @include breakpoint-up("lg") {
-        @include display-flex;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
       }
-
   }
 
-  &__content-wrapper {
-    @include breakpoint-up("lg") {
-      width: 50%;
-    }
+  &__icons {
+    display: grid;
+    align-content: space-around;
   }
 }

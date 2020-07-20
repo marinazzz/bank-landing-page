@@ -1,0 +1,60 @@
+.section-hero {
+  &__image {
+    position: relative;
+    min-height: 17rem;
+    background: url(../images/bg-intro-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include breakpoint-up("md") {
+      min-height: 34rem;
+    }
+
+    @include breakpoint-up("lg") {
+      min-height: 41rem;
+      flex: 3;
+      background: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(../images/bg-intro-desktop.svg);
+        background-size: 93%;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+
+        @include breakpoint-up("lg") {
+          width: 80rem;
+          background-position: center 75%;
+        }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../images/image-mockups.png);
+    background-size: 93%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @include breakpoint-up("md") {
+      background-size: 100%;
+      background-position: bottom;
+    }
+
+    @include breakpoint-up("lg") {
+      height: 120%;
+      width: 117%;
+      background-position: center 87%;
+      left: 30%;
+      background-size: cover;
+    }
+}
+}
+}

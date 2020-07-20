@@ -1,3 +1,9 @@
+header {
+  @include breakpoint-up("lg") {
+    padding: 0 $sm;
+  }
+}
+
 .nav {
   padding: $sm;
 

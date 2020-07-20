@@ -1,23 +1,29 @@
-.section-banner {
+.section-hero {
   background: $secondary-bcd-color;
   padding-bottom: $xl;
 
-  &__container {
-    display: block;
+  @include breakpoint-up("lg") {
+    padding: 0 $sm;
+  }
 
+  .content-centered {
     @include breakpoint-up("lg") {
       @include display-flex;
       flex-direction: row-reverse;
-    }
+  }
   }
 
-  &__text {
+  &__description {
     padding: $lg $sm 0 $sm;
+
+    @include breakpoint-up("lg") {
+      flex: 2;
+      padding:0;
+    }
 
     h1, p {
         padding-bottom: $md;
     }
-
 
       p {
         @include breakpoint-up("md") {
@@ -30,11 +36,6 @@
           max-width: 460px;
         }
       }
-
-    @include breakpoint-up("lg") {
-      padding: 0;
-      flex: 2;
-    }
   }
 
 }
@@ -44,7 +45,7 @@
   padding: $xl $sm;
 
   @include breakpoint-up("lg") {
-    padding: $xxl 0;
+    padding: $xxl $sm;
   }
 
   &__intro {
