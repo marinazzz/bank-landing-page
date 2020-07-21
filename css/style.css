@@ -415,9 +415,11 @@ p {
   .section-services__content > div p {
     padding-bottom: 1.4rem; } }
 
-@media (min-width: 768px) {
-  .section-services__content > div:not(:last-child) {
-    padding-bottom: 0; } }
+.section-services__content > div:not(:last-child) {
+  padding-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .section-services__content > div:not(:last-child) {
+      padding-bottom: 0; } }
 
 .section-hero__image {
   position: relative;
@@ -509,12 +511,12 @@ p {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -0.45rem; }
+    transform: translateY(-0.45rem); }
   .nav__button-item::after {
-    bottom: 0.45rem; }
+    transform: translateY(0.45rem); }
   .nav__button--open .nav__button-item::before {
-    transform: rotateZ(45deg) translate(-6px, -6px); }
+    transform: rotate(-45deg); }
   .nav__button--open .nav__button-item::after {
-    transform: rotateZ(-45deg) translate(-6px, 6px); }
+    transform: rotate(45deg); }
   .nav__button--open .nav__button-item {
     background: transparent; }

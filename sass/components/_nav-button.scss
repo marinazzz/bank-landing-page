@@ -28,19 +28,19 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -0.45rem;
+    transform: translateY(-0.45rem);
   }
 
   &-item::after {
-    bottom: 0.45rem;
+    transform: translateY(0.45rem);
   }
 
   &--open &-item::before {
-    transform: rotateZ(45deg) translate(-6px, -6px);
+    transform: rotate(-45deg);
   }
 
   &--open &-item::after {
-    transform: rotateZ(-45deg) translate(-6px, 6px);
+    transform: rotate(45deg);
   }
 
   &--open &-item {

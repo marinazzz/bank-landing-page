@@ -28,6 +28,8 @@
     }
 
     > div:not(:last-child) {
+        padding-bottom: $md;
+
         @include breakpoint-up("md") {
             padding-bottom: 0;
         }
